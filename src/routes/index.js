@@ -4,6 +4,6 @@ import root from './root'
 
 const router = Router()
 
-router.arguments(root)
+router.use(root)
 
 export default router
