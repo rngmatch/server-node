@@ -4,16 +4,7 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 import helmet from 'helmet'
-import pino from 'pino'
-
-const logger = pino({
-  transport: {
-    target: 'pino-pretty',
-    options: {
-      colorize: true
-    }
-  }
-})
+import logger from './helpers/logger'
 
 // const logger = pino({ prettyPrint: { colorize: true } })
 const app = express()
@@ -30,4 +21,6 @@ app.get('/', (req, res) => {
   res.send({ msg: title })
 })
 
-app.listen(port, ()=>logger.info('Application started at http://localhost${process.env.PORT}'),)
+app.listen(port, () =>
+  logger.info('Application started at http://localhost:${process.env.PORT}'),
+)
