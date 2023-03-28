@@ -9,3 +9,5 @@ router.get('/', (req, res) => {
   const title = process.env.TITLE || 'Server'
   res.send({ msg: title })
 })
+
+export default router
