@@ -28,6 +28,7 @@
     "prettier": "^2.8.5"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "builtin-modules": "^1.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -38,6 +39,7 @@
     "morgan": "^1.10.0",
     "pino": "^8.11.0",
     "pino-pretty": "^10.0.0",
-    "pkg-up": "^1.0.0"
+    "pkg-up": "^1.0.0",
+    "uuid": "^9.0.0"
   }
 }
