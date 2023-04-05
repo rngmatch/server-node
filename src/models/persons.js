@@ -11,6 +11,7 @@ export const getPerson = (id) => {
 export const createPerson = (person) => {
   const id = uuid()
   persons.push({ id, ...person })
+  return getPerson(id)
 }
 
 export const updatePerson = (id, person) => {
@@ -19,6 +20,7 @@ export const updatePerson = (id, person) => {
     const personIndex = person.findIndex((p) => p.id === id)
     persons[personIndex] = { id, ...person }
   }
+  return getPerson(id)
 }
 
 export const deletePerson = (id) => {
