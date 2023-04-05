@@ -7,7 +7,7 @@ import helmet from 'helmet'
 
 import logger from './helpers/logger'
 import router from './routes'
-import {notFound, errorHandler } from './helpers/errors'
+import { notFound, errorHandler } from './helpers/errors'
 
 const port = parseInt(process.env.PORT, 10) || 3000
 

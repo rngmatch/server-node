@@ -10,3 +10,11 @@ const logger = pino({
 })
 
 export default logger
+
+/*
+import consola from 'consola'
+
+const logger = consola
+
+export default logger
+*/
