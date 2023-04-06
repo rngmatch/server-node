@@ -5,6 +5,9 @@ COPY package*.json ./
 
 RUN npm install
 
+# Install Babel CLI
+RUN npm install -g babel-cli
+
 COPY . .
 
 RUN npm run build
