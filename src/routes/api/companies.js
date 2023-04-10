@@ -18,4 +18,14 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.post('/', async (req, res) => {
+  const companyName = req.body.name
+  if (companyName) {
+    const company = await addCompany(companyName)
+    res.send(company)
+  } else {
+    res.status(400).send({ msg: 'Company name is required' })
+  }
+})
+
 export default router
